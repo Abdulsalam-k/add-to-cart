@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  background-color: #ede8e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 780px;
+  width: 100%;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.10);
+}
+
+.card__image {
+  flex: 0 0 55%;
+  min-height: 380px;
+  background-image: url('image-product-desktop.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.card__content {
+  flex: 1;
+  padding: 2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card__category {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.card__desc {
+  font-size: 13.5px;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.card__pricing {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.price--current {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1f5c3a;
+}
+
+.price--original {
+  font-size: 1rem;
+  color: #9ca3af;
+  text-decoration: line-through;
+}
+
+.btn-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #1f5c3a;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-cart:hover {
+  background-color: #174d2f;
+  /* transform: translateY(-1px); */
+}
+
+.btn-cart:active {
+  transform: scale(0.98);
+}
+
+.btn-cart i {
+  font-size: 16px;
+}
+
+
+@media (max-width: 580px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card__image {
+    flex: none;
+    width: 100%;
+    min-height: 240px;
+  }
+
+  .card__content {
+    padding: 1.5rem;
+  }
+}
